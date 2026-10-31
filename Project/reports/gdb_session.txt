@@ -1,0 +1,24 @@
+Breakpoint 1 at 0x1195: file src/crash_demo.c, line 18.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, compute_sum (head=0x7fffffffe8c0) at src/crash_demo.c:18
+18	    int sum = 0;
+$1 = {value = 10, next = 0x7fffffffe8d0}
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000555555555245 in main () at src/crash_demo.c:41
+41	    printf("First value of broken list: %d\n", broken->value); /* SIGSEGV here */
+#0  0x0000555555555245 in main () at src/crash_demo.c:41
+        n1 = {value = 10, next = 0x7fffffffe8d0}
+        n2 = {value = 20, next = 0x0}
+        broken = 0x0
+$2 = (Node *) 0x0
+n1 = {value = 10, next = 0x7fffffffe8d0}
+n2 = {value = 20, next = 0x0}
+broken = 0x0
+A debugging session is active.
+
+	Inferior 1 [process 623] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

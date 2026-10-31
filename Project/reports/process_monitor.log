@@ -1,0 +1,11 @@
+
+[debug_runner] ---- run started Sat Sep 19 03:16:25 2026
+[debug_runner] target: ./bin/crash_demo
+[debug_runner] spawned child pid=627, waiting...
+[debug_runner] child pid=627 TERMINATED BY SIGNAL 11 (Segmentation fault)
+[debug_runner] -> this indicates a runtime error such as invalid memory access; re-run under gdb/valgrind to locate it.
+
+[debug_runner] ---- run started Sat Sep 19 03:16:25 2026
+[debug_runner] target: ./bin/crash_demo_fixed
+[debug_runner] spawned child pid=629, waiting...
+[debug_runner] child pid=629 exited normally, code=0
